@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello/cronometro.dart';
 import 'package:hello/cupertino.dart';
 import 'package:hello/estado.dart';
+import 'package:hello/streams.dart';
 
 void main() => runApp(Aplicacion());
 
@@ -66,6 +67,16 @@ class PantallaPrincipal extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                   builder: (_) => PantallaCronometro()
+                ));
+              },
+            ),
+            ListTile(
+              title: Text('Manejando Streams'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                  builder: (_) => PantallaConStream()
                 ));
               },
             ),

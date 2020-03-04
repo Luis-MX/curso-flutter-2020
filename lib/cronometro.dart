@@ -97,11 +97,18 @@ class PantallaOptimizada extends StatelessWidget {
 }
 
 class CronometroWidget extends StatefulWidget {
+
+  final int segundos;
+
+  CronometroWidget({this.segundos = 0, Key key}) : super(key: key);
   @override
   _CronometroWidgetState createState() => _CronometroWidgetState();
 }
 
 class _CronometroWidgetState extends State<CronometroWidget> {
+
+  // Future
+  // Stream
 
   int segundos = 0;
   StreamSubscription _cronometro;
@@ -109,6 +116,7 @@ class _CronometroWidgetState extends State<CronometroWidget> {
   @override
   void initState() {
     super.initState();
+    segundos = widget.segundos;
     _cronometro = Stream.periodic(Duration(seconds: 1), actualizacion)
       .listen(null);
   }
