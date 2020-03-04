@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello/cronometro.dart';
 import 'package:hello/cupertino.dart';
 import 'package:hello/estado.dart';
 
@@ -55,6 +56,16 @@ class PantallaPrincipal extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                   builder: (_) => PantallaConEstado()
+                ));
+              },
+            ),
+            ListTile(
+              title: Text('Cronometro'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                  builder: (_) => PantallaCronometro()
                 ));
               },
             ),
